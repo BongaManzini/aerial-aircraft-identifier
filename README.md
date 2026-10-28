@@ -1,13 +1,13 @@
-# ✈️ AeroScan AI: Deep Learning Aerial Image Aircraft Identifier
+# ️ AeroScan AI: Deep Learning Aerial Image Aircraft Identifier
 
-> **UniSA Annual Hackathon Challenge Project**  
-> **Challenge:** "Given these images, use AI and ML techniques to identify aircraft."  
-> **Deliverable:** A platform where the user drops an image of an aircraft and it is correctly detected, classified, and analyzed.  
+> **UniSA Annual Hackathon Challenge Project** 
+> **Challenge:** "Given these images, use AI and ML techniques to identify aircraft." 
+> **Deliverable:** A platform where the user drops an image of an aircraft and it is correctly detected, classified, and analyzed. 
 > **Author:** Bonga Manzini (UNISA BSc Informatics Student)
 
 ---
 
-## 📖 The Story Behind This Project
+## The Story Behind This Project
 
 At the **UniSA Annual Hackathon**, we were given aerial and satellite imagery of airfields and tasked with building a computer vision model that can detect and classify aircraft.
 
@@ -20,7 +20,7 @@ I built **AeroScan AI** as an interactive platform where you can drag and drop a
 
 ---
 
-## 🎯 Aircraft Taxonomy & Classes
+## Aircraft Taxonomy & Classes
 
 AeroScan AI classifies aircraft into 6 operational categories:
 - **Military Fighter Jet:** Delta or cropped swept wings with internal fuselage turbofans (e.g., JAS 39 Gripen, F-16 Falcon).
@@ -32,7 +32,7 @@ AeroScan AI classifies aircraft into 6 operational categories:
 
 ---
 
-## 🛠️ How It Works (Technical Pipeline)
+## ️ How It Works (Technical Pipeline)
 
 1. **Preprocessing & Normalization:** Converts imagery to 224x224 RGB, applying **Contrast Limited Adaptive Histogram Equalization (CLAHE)** to normalize runway glare.
 2. **Deep Learning Backbone:** Utilizes a lightweight convolutional backbone (MobileNetV2 / ResNet) optimized for fast edge inference.
@@ -41,7 +41,7 @@ AeroScan AI classifies aircraft into 6 operational categories:
 
 ---
 
-## 🚀 Running the Project Locally
+## Running the Project Locally
 
 ### 1. Interactive Web Platform
 Open `index.html` in your web browser, or serve it with Python:
@@ -57,7 +57,7 @@ python3 aircraft_classifier.py sample_gripen_fighter.jpg
 
 ---
 
-## 🤝 Contributing & Pull Requests
+## Contributing & Pull Requests
 
 Fellow students and computer vision enthusiasts are welcome to contribute!
 - Adding more aircraft classes (e.g., business jets, seaplanes, supersonic transports).

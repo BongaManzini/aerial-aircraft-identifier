@@ -127,7 +127,7 @@ def analyze_image_heuristics(filename):
 
 def main():
     print("=" * 70)
-    print("✈️  AeroScan AI: Deep Learning Aerial Aircraft Identifier")
+    print("️  AeroScan AI: Deep Learning Aerial Aircraft Identifier")
     print("UniSA Annual Hackathon Challenge: Aircraft Identification Platform")
     print("=" * 70)
     
@@ -138,7 +138,7 @@ def main():
     
     prediction = analyze_image_heuristics(test_file)
     
-    print("\n🎯 INFERENCE RESULT:")
+    print("\n INFERENCE RESULT:")
     print(f"  • Classification:       {prediction['detected_class']}")
     print(f"  • Confidence:           {prediction['confidence'] * 100:.2f}%")
     print(f"  • Wing Geometry:        {prediction['wing_sweep']}")
@@ -146,12 +146,12 @@ def main():
     print(f"  • Propulsion Config:    {prediction['engine_configuration']}")
     print(f"  • Operational Role:     {prediction['primary_mission']}")
     
-    print("\n📊 TOP-3 CLASS PROBABILITIES:")
+    print("\n TOP-3 CLASS PROBABILITIES:")
     for i, p in enumerate(prediction["top_predictions"], 1):
         bar = "█" * int(p["confidence"] * 30)
         print(f"  {i}. {p['name']:<48} | {bar:<30} {p['confidence'] * 100:.1f}%")
         
-    print("\n📐 BOUNDING BOX DETECTION (Top-Down Plane):")
+    print("\n BOUNDING BOX DETECTION (Top-Down Plane):")
     bb = prediction["bounding_box"]
     print(f"  [x: {bb['x']}, y: {bb['y']}, w: {bb['width']}, h: {bb['height']}, angle: {bb['rotation_deg']}°]")
     print("=" * 70)

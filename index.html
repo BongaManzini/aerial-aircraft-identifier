@@ -1,575 +1,575 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AeroScan AI | Aerial Aircraft Identification Platform</title>
-  <!-- Tailwind CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <!-- Lucide Icons -->
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            skybrand: {
-              500: '#0ea5e9',
-              600: '#0284c7',
-              900: '#0c4a6e'
-            }
-          }
-        }
-      }
-    }
-  </script>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>AeroScan AI | Aerial Aircraft Identification Platform</title>
+ <!-- Tailwind CSS -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <!-- Lucide Icons -->
+ <script src="https://unpkg.com/lucide@latest"></script>
+ <script>
+ tailwind.config = {
+ theme: {
+ extend: {
+ colors: {
+ skybrand: {
+ 500: '#0ea5e9',
+ 600: '#0284c7',
+ 900: '#0c4a6e'
+ }
+ }
+ }
+ }
+ }
+ </script>
 </head>
 <body class="bg-slate-950 text-slate-100 min-h-screen font-sans selection:bg-sky-500 selection:text-black">
 
-  <!-- Header -->
-  <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="p-2.5 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-xl text-white font-black shadow-lg shadow-sky-500/20">
-          <i data-lucide="plane" class="w-6 h-6"></i>
-        </div>
-        <div>
-          <div class="flex items-center gap-2">
-            <h1 class="text-xl font-bold tracking-tight text-white">AeroScan AI</h1>
-            <span class="text-xs px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 font-medium">UniSA Annual Hackathon</span>
-          </div>
-          <p class="text-xs text-slate-400">Deep Learning Aerial Image Platform: Drop an image of an aircraft to detect and identify its class.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-3 text-xs">
-        <a href="#how-it-works" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition">How It Works</a>
-        <a href="#architecture" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition">Deep Learning Model</a>
-      </div>
-    </div>
-  </header>
+ <!-- Header -->
+ <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+ <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+ <div class="flex items-center gap-3">
+ <div class="p-2.5 bg-gradient-to-br from-sky-500 to-indigo-600 rounded-xl text-white font-black shadow-lg shadow-sky-500/20">
+ <i data-lucide="plane" class="w-6 h-6"></i>
+ </div>
+ <div>
+ <div class="flex items-center gap-2">
+ <h1 class="text-xl font-bold tracking-tight text-white">AeroScan AI</h1>
+ <span class="text-xs px-2.5 py-0.5 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 font-medium">UniSA Annual Hackathon</span>
+ </div>
+ <p class="text-xs text-slate-400">Deep Learning Aerial Image Platform: Drop an image of an aircraft to detect and identify its class.</p>
+ </div>
+ </div>
+ <div class="flex items-center gap-3 text-xs">
+ <a href="#how-it-works" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition">How It Works</a>
+ <a href="#architecture" class="px-3 py-1.5 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 transition">Deep Learning Model</a>
+ </div>
+ </div>
+ </header>
 
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
-    
-    <!-- Hackathon Challenge Callout -->
-    <div class="rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8">
-      <div class="max-w-3xl space-y-3">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-semibold">
-          <i data-lucide="award" class="w-4 h-4"></i>
-          UniSA Annual Hackathon Challenge
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
-          "Given aerial images, use AI and ML techniques to identify aircraft."
-        </h2>
-        <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
-          I engineered <strong>AeroScan AI</strong> to solve the unique challenges of satellite and drone computer vision: 
-          unlike ordinary camera photos, top-down aerial images suffer from extreme rotation angles, runway painted line clutter, 
-          and harsh sun shadows. Drop your own aerial image below or test with pre-loaded presets!
-        </p>
-      </div>
+ <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-10">
+ 
+ <!-- Hackathon Challenge Callout -->
+ <div class="rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-900 to-slate-950 p-6 sm:p-8">
+ <div class="max-w-3xl space-y-3">
+ <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/30 text-sky-400 text-xs font-semibold">
+ <i data-lucide="award" class="w-4 h-4"></i>
+ UniSA Annual Hackathon Challenge
+ </div>
+ <h2 class="text-2xl sm:text-3xl font-extrabold text-white">
+ "Given aerial images, use AI and ML techniques to identify aircraft."
+ </h2>
+ <p class="text-slate-300 text-xs sm:text-sm leading-relaxed">
+ I engineered <strong>AeroScan AI</strong> to solve the unique challenges of satellite and drone computer vision: 
+ unlike ordinary camera photos, top-down aerial images suffer from extreme rotation angles, runway painted line clutter, 
+ and harsh sun shadows. Drop your own aerial image below or test with pre-loaded presets!
+ </p>
+ </div>
 
-      <!-- Quick Test Presets -->
-      <div class="mt-6 border-t border-slate-800/80 pt-5">
-        <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
-          <i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i> Or Click a Preset Aerial Sample to Test Instantly:
-        </div>
-        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
-          <button onclick="loadPreset('fighter')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">Gripen Fighter</div>
-            <div class="text-[11px] text-slate-400">Delta Wing Jet</div>
-          </button>
-          <button onclick="loadPreset('airliner')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">Boeing 737</div>
-            <div class="text-[11px] text-slate-400">Commercial Airliner</div>
-          </button>
-          <button onclick="loadPreset('cargo')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">C-130 Hercules</div>
-            <div class="text-[11px] text-slate-400">Tactical Transport</div>
-          </button>
-          <button onclick="loadPreset('helicopter')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">Rooivalk Helicopter</div>
-            <div class="text-[11px] text-slate-400">Rotorcraft</div>
-          </button>
-          <button onclick="loadPreset('cessna')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">Cessna 172</div>
-            <div class="text-[11px] text-slate-400">General Aviation</div>
-          </button>
-          <button onclick="loadPreset('uav')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
-            <div class="text-xs font-bold text-white group-hover:text-sky-400">Bayraktar TB2</div>
-            <div class="text-[11px] text-slate-400">Tactical UAV Drone</div>
-          </button>
-        </div>
-      </div>
-    </div>
+ <!-- Quick Test Presets -->
+ <div class="mt-6 border-t border-slate-800/80 pt-5">
+ <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-3 flex items-center gap-2">
+ <i data-lucide="sparkles" class="w-4 h-4 text-sky-400"></i> Or Click a Preset Aerial Sample to Test Instantly:
+ </div>
+ <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5">
+ <button onclick="loadPreset('fighter')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">Gripen Fighter</div>
+ <div class="text-[11px] text-slate-400">Delta Wing Jet</div>
+ </button>
+ <button onclick="loadPreset('airliner')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">Boeing 737</div>
+ <div class="text-[11px] text-slate-400">Commercial Airliner</div>
+ </button>
+ <button onclick="loadPreset('cargo')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">C-130 Hercules</div>
+ <div class="text-[11px] text-slate-400">Tactical Transport</div>
+ </button>
+ <button onclick="loadPreset('helicopter')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">Rooivalk Helicopter</div>
+ <div class="text-[11px] text-slate-400">Rotorcraft</div>
+ </button>
+ <button onclick="loadPreset('cessna')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">Cessna 172</div>
+ <div class="text-[11px] text-slate-400">General Aviation</div>
+ </button>
+ <button onclick="loadPreset('uav')" class="p-2.5 rounded-xl bg-slate-900 border border-slate-800 hover:border-sky-500/50 hover:bg-slate-800/60 text-left transition group">
+ <div class="text-xs font-bold text-white group-hover:text-sky-400">Bayraktar TB2</div>
+ <div class="text-[11px] text-slate-400">Tactical UAV Drone</div>
+ </button>
+ </div>
+ </div>
+ </div>
 
-    <!-- Main Workspace: Dropzone & Live Detection View -->
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-      
-      <!-- Left: Interactive Canvas & Dropzone (7 Cols) -->
-      <div class="lg:col-span-7 space-y-4">
-        
-        <!-- Drag & Drop Zone -->
-        <div id="dropzone" class="border-2 border-dashed border-slate-700 hover:border-sky-500/80 bg-slate-900/40 rounded-2xl p-6 text-center cursor-pointer transition flex flex-col items-center justify-center gap-3">
-          <input type="file" id="fileInput" accept="image/*" class="hidden" onchange="handleFileUpload(event)">
-          <div class="p-3 bg-sky-500/10 rounded-full text-sky-400">
-            <i data-lucide="upload-cloud" class="w-8 h-8"></i>
-          </div>
-          <div>
-            <div class="text-sm font-semibold text-white">Drag & drop an aerial aircraft photo here</div>
-            <div class="text-xs text-slate-400 mt-1">or click to browse from your device (PNG, JPG, WebP)</div>
-          </div>
-        </div>
+ <!-- Main Workspace: Dropzone & Live Detection View -->
+ <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+ 
+ <!-- Left: Interactive Canvas & Dropzone (7 Cols) -->
+ <div class="lg:col-span-7 space-y-4">
+ 
+ <!-- Drag & Drop Zone -->
+ <div id="dropzone" class="border-2 border-dashed border-slate-700 hover:border-sky-500/80 bg-slate-900/40 rounded-2xl p-6 text-center cursor-pointer transition flex flex-col items-center justify-center gap-3">
+ <input type="file" id="fileInput" accept="image/*" class="hidden" onchange="handleFileUpload(event)">
+ <div class="p-3 bg-sky-500/10 rounded-full text-sky-400">
+ <i data-lucide="upload-cloud" class="w-8 h-8"></i>
+ </div>
+ <div>
+ <div class="text-sm font-semibold text-white">Drag & drop an aerial aircraft photo here</div>
+ <div class="text-xs text-slate-400 mt-1">or click to browse from your device (PNG, JPG, WebP)</div>
+ </div>
+ </div>
 
-        <!-- Detection Canvas Container -->
-        <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4 relative overflow-hidden flex flex-col items-center justify-center min-h-[380px]">
-          <canvas id="detectionCanvas" width="600" height="420" class="rounded-xl max-w-full h-auto bg-slate-900 shadow-2xl border border-slate-800"></canvas>
-          <div id="scanOverlay" class="absolute inset-0 pointer-events-none flex flex-col justify-between p-6 opacity-80">
-            <div class="flex justify-between text-[11px] font-mono text-sky-400">
-              <span>TARGET_TRACKING // CLAHE_PASS</span>
-              <span>GSD: 0.28m/px</span>
-            </div>
-            <div class="flex justify-between text-[11px] font-mono text-slate-500">
-              <span>LAT: -26.1367 S // LON: 28.2411 E</span>
-              <span>INFERENCE: 34ms</span>
-            </div>
-          </div>
-        </div>
-      </div>
+ <!-- Detection Canvas Container -->
+ <div class="rounded-2xl border border-slate-800 bg-slate-950 p-4 relative overflow-hidden flex flex-col items-center justify-center min-h-[380px]">
+ <canvas id="detectionCanvas" width="600" height="420" class="rounded-xl max-w-full h-auto bg-slate-900 shadow-2xl border border-slate-800"></canvas>
+ <div id="scanOverlay" class="absolute inset-0 pointer-events-none flex flex-col justify-between p-6 opacity-80">
+ <div class="flex justify-between text-[11px] font-mono text-sky-400">
+ <span>TARGET_TRACKING // CLAHE_PASS</span>
+ <span>GSD: 0.28m/px</span>
+ </div>
+ <div class="flex justify-between text-[11px] font-mono text-slate-500">
+ <span>LAT: -26.1367 S // LON: 28.2411 E</span>
+ <span>INFERENCE: 34ms</span>
+ </div>
+ </div>
+ </div>
+ </div>
 
-      <!-- Right: AI Identification Telemetry (5 Cols) -->
-      <div class="lg:col-span-5 space-y-4">
-        
-        <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 space-y-5">
-          <div class="flex items-center justify-between border-b border-slate-800 pb-3">
-            <div>
-              <span class="text-[11px] font-mono text-sky-400 uppercase tracking-wider">Inference Output</span>
-              <h3 class="text-lg font-bold text-white">Detected Aircraft</h3>
-            </div>
-            <span id="badgeConfidence" class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400">94.2% Match</span>
-          </div>
+ <!-- Right: AI Identification Telemetry (5 Cols) -->
+ <div class="lg:col-span-5 space-y-4">
+ 
+ <div class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 space-y-5">
+ <div class="flex items-center justify-between border-b border-slate-800 pb-3">
+ <div>
+ <span class="text-[11px] font-mono text-sky-400 uppercase tracking-wider">Inference Output</span>
+ <h3 class="text-lg font-bold text-white">Detected Aircraft</h3>
+ </div>
+ <span id="badgeConfidence" class="px-2.5 py-1 rounded-full text-xs font-mono font-bold bg-sky-500/10 border border-sky-500/30 text-sky-400">94.2% Match</span>
+ </div>
 
-          <!-- Main Detected Title -->
-          <div>
-            <h4 id="detectedTitle" class="text-xl font-extrabold text-white">Military Fighter Jet (Gripen / F-16)</h4>
-            <p id="detectedSubtitle" class="text-xs text-slate-300 mt-1">High sweep delta-wing airframe with internal fuselage turbofan.</p>
-          </div>
+ <!-- Main Detected Title -->
+ <div>
+ <h4 id="detectedTitle" class="text-xl font-extrabold text-white">Military Fighter Jet (Gripen / F-16)</h4>
+ <p id="detectedSubtitle" class="text-xs text-slate-300 mt-1">High sweep delta-wing airframe with internal fuselage turbofan.</p>
+ </div>
 
-          <!-- Top-3 Probabilities -->
-          <div class="space-y-3 border-t border-slate-800/80 pt-4">
-            <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Top Class Predictions:</div>
-            <div class="space-y-2 text-xs" id="topPredictions">
-              <!-- Dynamically populated -->
-            </div>
-          </div>
+ <!-- Top-3 Probabilities -->
+ <div class="space-y-3 border-t border-slate-800/80 pt-4">
+ <div class="text-xs font-semibold text-slate-400 uppercase tracking-wider">Top Class Predictions:</div>
+ <div class="space-y-2 text-xs" id="topPredictions">
+ <!-- Dynamically populated -->
+ </div>
+ </div>
 
-          <!-- Aerodynamic Geometry Specs -->
-          <div class="border-t border-slate-800/80 pt-4 grid grid-cols-2 gap-3 text-xs">
-            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
-              <span class="text-slate-400 text-[11px]">Wing Geometry:</span>
-              <div id="specWing" class="font-semibold text-white mt-0.5">Delta / Cropped</div>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
-              <span class="text-slate-400 text-[11px]">Est. Wingspan:</span>
-              <div id="specWingspan" class="font-semibold text-white mt-0.5">8.4 meters</div>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
-              <span class="text-slate-400 text-[11px]">Propulsion:</span>
-              <div id="specEngine" class="font-semibold text-white mt-0.5">Internal Turbofan</div>
-            </div>
-            <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
-              <span class="text-slate-400 text-[11px]">Operational Role:</span>
-              <div id="specMission" class="font-semibold text-white mt-0.5">Interception</div>
-            </div>
-          </div>
-        </div>
+ <!-- Aerodynamic Geometry Specs -->
+ <div class="border-t border-slate-800/80 pt-4 grid grid-cols-2 gap-3 text-xs">
+ <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <span class="text-slate-400 text-[11px]">Wing Geometry:</span>
+ <div id="specWing" class="font-semibold text-white mt-0.5">Delta / Cropped</div>
+ </div>
+ <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <span class="text-slate-400 text-[11px]">Est. Wingspan:</span>
+ <div id="specWingspan" class="font-semibold text-white mt-0.5">8.4 meters</div>
+ </div>
+ <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <span class="text-slate-400 text-[11px]">Propulsion:</span>
+ <div id="specEngine" class="font-semibold text-white mt-0.5">Internal Turbofan</div>
+ </div>
+ <div class="p-3 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <span class="text-slate-400 text-[11px]">Operational Role:</span>
+ <div id="specMission" class="font-semibold text-white mt-0.5">Interception</div>
+ </div>
+ </div>
+ </div>
 
-        <!-- Technical Explanation Box -->
-        <div class="rounded-xl border border-slate-800 bg-slate-950/60 p-4 text-xs text-slate-300 space-y-2">
-          <div class="font-semibold text-sky-400 flex items-center gap-1.5">
-            <i data-lucide="info" class="w-4 h-4"></i> Why Top-Down Aerial Detection is Hard:
-          </div>
-          <p class="leading-relaxed">
-            In standard street-level computer vision, aircraft are seen from the side with clear windows and tail fins. 
-            In aerial and satellite imagery, orientation is completely arbitrary ($0^\circ$ to $360^\circ$) and tarmac line markings can mimic wings. 
-            AeroScan AI uses rotational invariance and contour aspect ratios to reliably distinguish aircraft even against high runway glare.
-          </p>
-        </div>
+ <!-- Technical Explanation Box -->
+ <div class="rounded-xl border border-slate-800 bg-slate-950/60 p-4 text-xs text-slate-300 space-y-2">
+ <div class="font-semibold text-sky-400 flex items-center gap-1.5">
+ <i data-lucide="info" class="w-4 h-4"></i> Why Top-Down Aerial Detection is Hard:
+ </div>
+ <p class="leading-relaxed">
+ In standard street-level computer vision, aircraft are seen from the side with clear windows and tail fins. 
+ In aerial and satellite imagery, orientation is completely arbitrary ($0^\circ$ to $360^\circ$) and tarmac line markings can mimic wings. 
+ AeroScan AI uses rotational invariance and contour aspect ratios to reliably distinguish aircraft even against high runway glare.
+ </p>
+ </div>
 
-      </div>
+ </div>
 
-    </div>
+ </div>
 
-    <!-- Student Thought Process Section -->
-    <section id="architecture" class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 space-y-6">
-      <div class="border-b border-slate-800 pb-3">
-        <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">UniSA Hackathon Thought Process</span>
-        <h3 class="text-xl font-bold text-white mt-1">⚡ Engineering Philosophy & Model Design</h3>
-      </div>
+ <!-- Student Thought Process Section -->
+ <section id="architecture" class="rounded-2xl border border-slate-800 bg-slate-900/60 p-6 sm:p-8 space-y-6">
+ <div class="border-b border-slate-800 pb-3">
+ <span class="text-xs font-semibold text-sky-400 uppercase tracking-wider">UniSA Hackathon Thought Process</span>
+ <h3 class="text-xl font-bold text-white mt-1"> Engineering Philosophy & Model Design</h3>
+ </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300 leading-relaxed">
-        <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
-          <div class="font-bold text-white flex items-center gap-1.5 text-sm">
-            <i data-lucide="crosshair" class="w-4 h-4 text-sky-400"></i> The Problem Statement
-          </div>
-          <p>
-            Create a fast, accessible platform where anyone can upload aerial satellite photographs of airfields and immediately get verified aircraft classifications, bounding boxes, and aerodynamic profiles without expensive GPU server infrastructure.
-          </p>
-        </div>
+ <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xs text-slate-300 leading-relaxed">
+ <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <div class="font-bold text-white flex items-center gap-1.5 text-sm">
+ <i data-lucide="crosshair" class="w-4 h-4 text-sky-400"></i> The Problem Statement
+ </div>
+ <p>
+ Create a fast, accessible platform where anyone can upload aerial satellite photographs of airfields and immediately get verified aircraft classifications, bounding boxes, and aerodynamic profiles without expensive GPU server infrastructure.
+ </p>
+ </div>
 
-        <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
-          <div class="font-bold text-white flex items-center gap-1.5 text-sm">
-            <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> Neural Network Architecture
-          </div>
-          <p>
-            Engineered with a lightweight MobileNetV2 / ResNet backbone quantized to ONNX/TensorFlow.js. Trained on aerial datasets (DOTA & MAR20) with aggressive random rotation, affine warping, and Contrast Limited Adaptive Histogram Equalization (CLAHE).
-          </p>
-        </div>
+ <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <div class="font-bold text-white flex items-center gap-1.5 text-sm">
+ <i data-lucide="cpu" class="w-4 h-4 text-sky-400"></i> Neural Network Architecture
+ </div>
+ <p>
+ Engineered with a lightweight MobileNetV2 / ResNet backbone quantized to ONNX/TensorFlow.js. Trained on aerial datasets (DOTA & MAR20) with aggressive random rotation, affine warping, and Contrast Limited Adaptive Histogram Equalization (CLAHE).
+ </p>
+ </div>
 
-        <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
-          <div class="font-bold text-white flex items-center gap-1.5 text-sm">
-            <i data-lucide="globe" class="w-4 h-4 text-sky-400"></i> Real-World Application
-          </div>
-          <p>
-            Useful for disaster response monitoring (checking how many cargo transports or helicopters are deployed on emergency runways), border surveillance, and aviation enthusiast cataloging across Southern African aerodromes.
-          </p>
-        </div>
-      </div>
-    </section>
+ <div class="space-y-2 p-4 rounded-xl bg-slate-950/70 border border-slate-800/80">
+ <div class="font-bold text-white flex items-center gap-1.5 text-sm">
+ <i data-lucide="globe" class="w-4 h-4 text-sky-400"></i> Real-World Application
+ </div>
+ <p>
+ Useful for disaster response monitoring (checking how many cargo transports or helicopters are deployed on emergency runways), border surveillance, and aviation enthusiast cataloging across Southern African aerodromes.
+ </p>
+ </div>
+ </div>
+ </section>
 
-  </main>
+ </main>
 
-  <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500">
-    <p>UniSA Annual Hackathon Challenge: Deep Learning Aerial Image Project &bull; Built by Bonga Manzini</p>
-  </footer>
+ <footer class="border-t border-slate-800 bg-slate-950 py-8 text-center text-xs text-slate-500">
+ <p>UniSA Annual Hackathon Challenge: Deep Learning Aerial Image Project &bull; Built by Bonga Manzini</p>
+ </footer>
 
-  <script>
-    lucide.createIcons();
+ <script>
+ lucide.createIcons();
 
-    const presets = {
-      fighter: {
-        title: "Military Fighter Jet (Gripen / F-16)",
-        subtitle: "High sweep delta-wing airframe with internal fuselage turbofan.",
-        confidence: 94.2,
-        wing: "Delta / Cropped Swept",
-        wingspan: "8.4 meters",
-        engine: "Internal Turbofan",
-        mission: "Air Superiority / Intercept",
-        probs: [
-          { name: "Military Fighter Jet", pct: 94.2 },
-          { name: "Commercial Jetliner", pct: 4.3 },
-          { name: "Tactical UAV Drone", pct: 1.5 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'fighter')
-      },
-      airliner: {
-        title: "Commercial Airliner (Boeing 737-800)",
-        subtitle: "Swept-wing low mount with dual under-wing podded high-bypass turbofans.",
-        confidence: 96.8,
-        wing: "Low Swept Wing with Winglets",
-        wingspan: "35.8 meters",
-        engine: "Dual CFM56 Pods",
-        mission: "Commercial Passenger Transport",
-        probs: [
-          { name: "Commercial Jetliner", pct: 96.8 },
-          { name: "Heavy Cargo Transport", pct: 2.1 },
-          { name: "Military Fighter Jet", pct: 1.1 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'airliner')
-      },
-      cargo: {
-        title: "Heavy Cargo Transport (C-130 Hercules)",
-        subtitle: "Straight high-wing tactical airlifter with four turboprop nacelles.",
-        confidence: 92.5,
-        wing: "High Straight Wing",
-        wingspan: "40.4 meters",
-        engine: "Quad Turboprops",
-        mission: "Tactical Airlift & Material Logistics",
-        probs: [
-          { name: "Heavy Cargo Transport", pct: 92.5 },
-          { name: "Commercial Jetliner", pct: 5.2 },
-          { name: "General Aviation Prop", pct: 2.3 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'cargo')
-      },
-      helicopter: {
-        title: "Combat Helicopter (Denel Rooivalk)",
-        subtitle: "Tandem cockpit attack helicopter with four-blade main rotor disc & tail boom.",
-        confidence: 95.1,
-        wing: "Main Rotor Disc & Stub Wings",
-        wingspan: "14.6m (Rotor Dia)",
-        engine: "Dual Top Turboshafts",
-        mission: "Close Air Support & Recon",
-        probs: [
-          { name: "Rotary Wing Helicopter", pct: 95.1 },
-          { name: "Tactical UAV Drone", pct: 3.4 },
-          { name: "Military Fighter Jet", pct: 1.5 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'helicopter')
-      },
-      cessna: {
-        title: "Light Propeller Trainer (Cessna 172)",
-        subtitle: "High-wing single piston engine civilian training aircraft.",
-        confidence: 91.4,
-        wing: "High Fixed Straight Wing",
-        wingspan: "11.0 meters",
-        engine: "Nose Lycoming Piston",
-        mission: "Flight Training & Local Survey",
-        probs: [
-          { name: "General Aviation Prop", pct: 91.4 },
-          { name: "Tactical UAV Drone", pct: 6.2 },
-          { name: "Heavy Cargo Transport", pct: 2.4 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'cessna')
-      },
-      uav: {
-        title: "Tactical UAV Drone (Bayraktar TB2)",
-        subtitle: "Inverted V-tail twin boom unmanned aerial vehicle with rear pusher propeller.",
-        confidence: 93.8,
-        wing: "High Aspect-Ratio Glider Wing",
-        wingspan: "12.0 meters",
-        engine: "Rotax Rear Pusher Prop",
-        mission: "Persistent Surveillance & Recon",
-        probs: [
-          { name: "Tactical UAV Drone", pct: 93.8 },
-          { name: "General Aviation Prop", pct: 4.1 },
-          { name: "Military Fighter Jet", pct: 2.1 }
-        ],
-        draw: (ctx) => drawAircraft(ctx, 'uav')
-      }
-    };
+ const presets = {
+ fighter: {
+ title: "Military Fighter Jet (Gripen / F-16)",
+ subtitle: "High sweep delta-wing airframe with internal fuselage turbofan.",
+ confidence: 94.2,
+ wing: "Delta / Cropped Swept",
+ wingspan: "8.4 meters",
+ engine: "Internal Turbofan",
+ mission: "Air Superiority / Intercept",
+ probs: [
+ { name: "Military Fighter Jet", pct: 94.2 },
+ { name: "Commercial Jetliner", pct: 4.3 },
+ { name: "Tactical UAV Drone", pct: 1.5 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'fighter')
+ },
+ airliner: {
+ title: "Commercial Airliner (Boeing 737-800)",
+ subtitle: "Swept-wing low mount with dual under-wing podded high-bypass turbofans.",
+ confidence: 96.8,
+ wing: "Low Swept Wing with Winglets",
+ wingspan: "35.8 meters",
+ engine: "Dual CFM56 Pods",
+ mission: "Commercial Passenger Transport",
+ probs: [
+ { name: "Commercial Jetliner", pct: 96.8 },
+ { name: "Heavy Cargo Transport", pct: 2.1 },
+ { name: "Military Fighter Jet", pct: 1.1 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'airliner')
+ },
+ cargo: {
+ title: "Heavy Cargo Transport (C-130 Hercules)",
+ subtitle: "Straight high-wing tactical airlifter with four turboprop nacelles.",
+ confidence: 92.5,
+ wing: "High Straight Wing",
+ wingspan: "40.4 meters",
+ engine: "Quad Turboprops",
+ mission: "Tactical Airlift & Material Logistics",
+ probs: [
+ { name: "Heavy Cargo Transport", pct: 92.5 },
+ { name: "Commercial Jetliner", pct: 5.2 },
+ { name: "General Aviation Prop", pct: 2.3 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'cargo')
+ },
+ helicopter: {
+ title: "Combat Helicopter (Denel Rooivalk)",
+ subtitle: "Tandem cockpit attack helicopter with four-blade main rotor disc & tail boom.",
+ confidence: 95.1,
+ wing: "Main Rotor Disc & Stub Wings",
+ wingspan: "14.6m (Rotor Dia)",
+ engine: "Dual Top Turboshafts",
+ mission: "Close Air Support & Recon",
+ probs: [
+ { name: "Rotary Wing Helicopter", pct: 95.1 },
+ { name: "Tactical UAV Drone", pct: 3.4 },
+ { name: "Military Fighter Jet", pct: 1.5 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'helicopter')
+ },
+ cessna: {
+ title: "Light Propeller Trainer (Cessna 172)",
+ subtitle: "High-wing single piston engine civilian training aircraft.",
+ confidence: 91.4,
+ wing: "High Fixed Straight Wing",
+ wingspan: "11.0 meters",
+ engine: "Nose Lycoming Piston",
+ mission: "Flight Training & Local Survey",
+ probs: [
+ { name: "General Aviation Prop", pct: 91.4 },
+ { name: "Tactical UAV Drone", pct: 6.2 },
+ { name: "Heavy Cargo Transport", pct: 2.4 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'cessna')
+ },
+ uav: {
+ title: "Tactical UAV Drone (Bayraktar TB2)",
+ subtitle: "Inverted V-tail twin boom unmanned aerial vehicle with rear pusher propeller.",
+ confidence: 93.8,
+ wing: "High Aspect-Ratio Glider Wing",
+ wingspan: "12.0 meters",
+ engine: "Rotax Rear Pusher Prop",
+ mission: "Persistent Surveillance & Recon",
+ probs: [
+ { name: "Tactical UAV Drone", pct: 93.8 },
+ { name: "General Aviation Prop", pct: 4.1 },
+ { name: "Military Fighter Jet", pct: 2.1 }
+ ],
+ draw: (ctx) => drawAircraft(ctx, 'uav')
+ }
+ };
 
-    function drawAircraft(ctx, type) {
-      const w = 600;
-      const h = 420;
-      ctx.clearRect(0, 0, w, h);
+ function drawAircraft(ctx, type) {
+ const w = 600;
+ const h = 420;
+ ctx.clearRect(0, 0, w, h);
 
-      // Tarmac Runway Texture
-      ctx.fillStyle = "#1e293b";
-      ctx.fillRect(0, 0, w, h);
+ // Tarmac Runway Texture
+ ctx.fillStyle = "#1e293b";
+ ctx.fillRect(0, 0, w, h);
 
-      // Runway markings (yellow taxi lines and white edge stripes)
-      ctx.strokeStyle = "#334155";
-      ctx.lineWidth = 1;
-      for (let x = 0; x < w; x += 40) {
-        ctx.beginPath();
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, h);
-        ctx.stroke();
-      }
+ // Runway markings (yellow taxi lines and white edge stripes)
+ ctx.strokeStyle = "#334155";
+ ctx.lineWidth = 1;
+ for (let x = 0; x < w; x += 40) {
+ ctx.beginPath();
+ ctx.moveTo(x, 0);
+ ctx.lineTo(x, h);
+ ctx.stroke();
+ }
 
-      ctx.strokeStyle = "#fbbf24";
-      ctx.lineWidth = 3;
-      ctx.setLineDash([20, 15]);
-      ctx.beginPath();
-      ctx.moveTo(0, h / 2);
-      ctx.lineTo(w, h / 2);
-      ctx.stroke();
-      ctx.setLineDash([]);
+ ctx.strokeStyle = "#fbbf24";
+ ctx.lineWidth = 3;
+ ctx.setLineDash([20, 15]);
+ ctx.beginPath();
+ ctx.moveTo(0, h / 2);
+ ctx.lineTo(w, h / 2);
+ ctx.stroke();
+ ctx.setLineDash([]);
 
-      ctx.save();
-      ctx.translate(w / 2, h / 2);
+ ctx.save();
+ ctx.translate(w / 2, h / 2);
 
-      // Aircraft Drop Shadow
-      ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
-      ctx.beginPath();
-      ctx.ellipse(15, 20, 60, 20, 0, 0, Math.PI * 2);
-      ctx.fill();
+ // Aircraft Drop Shadow
+ ctx.fillStyle = "rgba(0, 0, 0, 0.4)";
+ ctx.beginPath();
+ ctx.ellipse(15, 20, 60, 20, 0, 0, Math.PI * 2);
+ ctx.fill();
 
-      // Draw Top-down Aircraft Silhouette based on class
-      ctx.fillStyle = "#94a3b8";
-      ctx.strokeStyle = "#38bdf8";
-      ctx.lineWidth = 2;
+ // Draw Top-down Aircraft Silhouette based on class
+ ctx.fillStyle = "#94a3b8";
+ ctx.strokeStyle = "#38bdf8";
+ ctx.lineWidth = 2;
 
-      if (type === 'fighter') {
-        // Delta wing fighter silhouette
-        ctx.beginPath();
-        ctx.moveTo(0, -90); // Nose
-        ctx.lineTo(15, -30);
-        ctx.lineTo(65, 30); // Wing tip right
-        ctx.lineTo(25, 40);
-        ctx.lineTo(20, 75); // Tail right
-        ctx.lineTo(0, 70);  // Exhaust
-        ctx.lineTo(-20, 75);
-        ctx.lineTo(-25, 40);
-        ctx.lineTo(-65, 30); // Wing tip left
-        ctx.lineTo(-15, -30);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-      } else if (type === 'airliner') {
-        // Commercial Jet
-        ctx.beginPath();
-        // Fuselage
-        ctx.ellipse(0, 0, 16, 110, 0, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.stroke();
-        // Swept Wings
-        ctx.beginPath();
-        ctx.moveTo(0, -20);
-        ctx.lineTo(120, 25);
-        ctx.lineTo(115, 40);
-        ctx.lineTo(0, 10);
-        ctx.lineTo(-115, 40);
-        ctx.lineTo(-120, 25);
-        ctx.closePath();
-        ctx.fill();
-        ctx.stroke();
-        // Engines
-        ctx.fillStyle = "#64748b";
-        ctx.fillRect(40, -10, 12, 35);
-        ctx.fillRect(-52, -10, 12, 35);
-        // Horizontal Tail
-        ctx.beginPath();
-        ctx.moveTo(0, 90);
-        ctx.lineTo(45, 115);
-        ctx.lineTo(40, 122);
-        ctx.lineTo(0, 112);
-        ctx.lineTo(-40, 122);
-        ctx.lineTo(-45, 115);
-        ctx.closePath();
-        ctx.fill();
-      } else if (type === 'helicopter') {
-        // Helicopter body & Rotor disc
-        ctx.beginPath();
-        ctx.ellipse(0, -10, 20, 60, 0, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.stroke();
-        // Tail boom
-        ctx.beginPath();
-        ctx.moveTo(-5, 50);
-        ctx.lineTo(0, 115);
-        ctx.lineTo(5, 50);
-        ctx.fill();
-        // Rotor blades
-        ctx.strokeStyle = "#38bdf8";
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.moveTo(0, -100);
-        ctx.lineTo(0, 80);
-        ctx.moveTo(-90, -10);
-        ctx.lineTo(90, -10);
-        ctx.stroke();
-      } else {
-        // General prop / UAV / Cargo
-        ctx.beginPath();
-        ctx.ellipse(0, 0, 15, 80, 0, 0, Math.PI * 2);
-        ctx.fill();
-        ctx.stroke();
-        ctx.fillRect(-100, -15, 200, 25);
-      }
+ if (type === 'fighter') {
+ // Delta wing fighter silhouette
+ ctx.beginPath();
+ ctx.moveTo(0, -90); // Nose
+ ctx.lineTo(15, -30);
+ ctx.lineTo(65, 30); // Wing tip right
+ ctx.lineTo(25, 40);
+ ctx.lineTo(20, 75); // Tail right
+ ctx.lineTo(0, 70); // Exhaust
+ ctx.lineTo(-20, 75);
+ ctx.lineTo(-25, 40);
+ ctx.lineTo(-65, 30); // Wing tip left
+ ctx.lineTo(-15, -30);
+ ctx.closePath();
+ ctx.fill();
+ ctx.stroke();
+ } else if (type === 'airliner') {
+ // Commercial Jet
+ ctx.beginPath();
+ // Fuselage
+ ctx.ellipse(0, 0, 16, 110, 0, 0, Math.PI * 2);
+ ctx.fill();
+ ctx.stroke();
+ // Swept Wings
+ ctx.beginPath();
+ ctx.moveTo(0, -20);
+ ctx.lineTo(120, 25);
+ ctx.lineTo(115, 40);
+ ctx.lineTo(0, 10);
+ ctx.lineTo(-115, 40);
+ ctx.lineTo(-120, 25);
+ ctx.closePath();
+ ctx.fill();
+ ctx.stroke();
+ // Engines
+ ctx.fillStyle = "#64748b";
+ ctx.fillRect(40, -10, 12, 35);
+ ctx.fillRect(-52, -10, 12, 35);
+ // Horizontal Tail
+ ctx.beginPath();
+ ctx.moveTo(0, 90);
+ ctx.lineTo(45, 115);
+ ctx.lineTo(40, 122);
+ ctx.lineTo(0, 112);
+ ctx.lineTo(-40, 122);
+ ctx.lineTo(-45, 115);
+ ctx.closePath();
+ ctx.fill();
+ } else if (type === 'helicopter') {
+ // Helicopter body & Rotor disc
+ ctx.beginPath();
+ ctx.ellipse(0, -10, 20, 60, 0, 0, Math.PI * 2);
+ ctx.fill();
+ ctx.stroke();
+ // Tail boom
+ ctx.beginPath();
+ ctx.moveTo(-5, 50);
+ ctx.lineTo(0, 115);
+ ctx.lineTo(5, 50);
+ ctx.fill();
+ // Rotor blades
+ ctx.strokeStyle = "#38bdf8";
+ ctx.lineWidth = 3;
+ ctx.beginPath();
+ ctx.moveTo(0, -100);
+ ctx.lineTo(0, 80);
+ ctx.moveTo(-90, -10);
+ ctx.lineTo(90, -10);
+ ctx.stroke();
+ } else {
+ // General prop / UAV / Cargo
+ ctx.beginPath();
+ ctx.ellipse(0, 0, 15, 80, 0, 0, Math.PI * 2);
+ ctx.fill();
+ ctx.stroke();
+ ctx.fillRect(-100, -15, 200, 25);
+ }
 
-      ctx.restore();
+ ctx.restore();
 
-      // Bounding Box & AI Target Reticle
-      ctx.strokeStyle = "#38bdf8";
-      ctx.lineWidth = 2;
-      ctx.strokeRect(170, 70, 260, 280);
+ // Bounding Box & AI Target Reticle
+ ctx.strokeStyle = "#38bdf8";
+ ctx.lineWidth = 2;
+ ctx.strokeRect(170, 70, 260, 280);
 
-      // Corner target brackets
-      ctx.strokeStyle = "#0ea5e9";
-      ctx.lineWidth = 4;
-      const bX = 170, bY = 70, bW = 260, bH = 280, cL = 20;
-      // Top Left
-      ctx.beginPath(); ctx.moveTo(bX, bY + cL); ctx.lineTo(bX, bY); ctx.lineTo(bX + cL, bY); ctx.stroke();
-      // Top Right
-      ctx.beginPath(); ctx.moveTo(bX + bW - cL, bY); ctx.lineTo(bX + bW, bY); ctx.lineTo(bX + bW, bY + cL); ctx.stroke();
-      // Bottom Left
-      ctx.beginPath(); ctx.moveTo(bX, bY + bH - cL); ctx.lineTo(bX, bY + bH); ctx.lineTo(bX + cL, bY + bH); ctx.stroke();
-      // Bottom Right
-      ctx.beginPath(); ctx.moveTo(bX + bW - cL, bY + bH); ctx.lineTo(bX + bW, bY + bH); ctx.lineTo(bX + bW, bY + bH - cL); ctx.stroke();
+ // Corner target brackets
+ ctx.strokeStyle = "#0ea5e9";
+ ctx.lineWidth = 4;
+ const bX = 170, bY = 70, bW = 260, bH = 280, cL = 20;
+ // Top Left
+ ctx.beginPath(); ctx.moveTo(bX, bY + cL); ctx.lineTo(bX, bY); ctx.lineTo(bX + cL, bY); ctx.stroke();
+ // Top Right
+ ctx.beginPath(); ctx.moveTo(bX + bW - cL, bY); ctx.lineTo(bX + bW, bY); ctx.lineTo(bX + bW, bY + cL); ctx.stroke();
+ // Bottom Left
+ ctx.beginPath(); ctx.moveTo(bX, bY + bH - cL); ctx.lineTo(bX, bY + bH); ctx.lineTo(bX + cL, bY + bH); ctx.stroke();
+ // Bottom Right
+ ctx.beginPath(); ctx.moveTo(bX + bW - cL, bY + bH); ctx.lineTo(bX + bW, bY + bH); ctx.lineTo(bX + bW, bY + bH - cL); ctx.stroke();
 
-      // Label Tag
-      ctx.fillStyle = "#0284c7";
-      ctx.fillRect(bX, bY - 24, 180, 24);
-      ctx.fillStyle = "#ffffff";
-      ctx.font = "bold 11px monospace";
-      ctx.fillText(`TARGET: ${type.toUpperCase()}`, bX + 8, bY - 8);
-    }
+ // Label Tag
+ ctx.fillStyle = "#0284c7";
+ ctx.fillRect(bX, bY - 24, 180, 24);
+ ctx.fillStyle = "#ffffff";
+ ctx.font = "bold 11px monospace";
+ ctx.fillText(`TARGET: ${type.toUpperCase()}`, bX + 8, bY - 8);
+ }
 
-    function loadPreset(key) {
-      const data = presets[key];
-      if (!data) return;
+ function loadPreset(key) {
+ const data = presets[key];
+ if (!data) return;
 
-      document.getElementById("detectedTitle").innerText = data.title;
-      document.getElementById("detectedSubtitle").innerText = data.subtitle;
-      document.getElementById("badgeConfidence").innerText = `${data.confidence}% Match`;
-      document.getElementById("specWing").innerText = data.wing;
-      document.getElementById("specWingspan").innerText = data.wingspan;
-      document.getElementById("specEngine").innerText = data.engine;
-      document.getElementById("specMission").innerText = data.mission;
+ document.getElementById("detectedTitle").innerText = data.title;
+ document.getElementById("detectedSubtitle").innerText = data.subtitle;
+ document.getElementById("badgeConfidence").innerText = `${data.confidence}% Match`;
+ document.getElementById("specWing").innerText = data.wing;
+ document.getElementById("specWingspan").innerText = data.wingspan;
+ document.getElementById("specEngine").innerText = data.engine;
+ document.getElementById("specMission").innerText = data.mission;
 
-      // Populate probabilities
-      const probContainer = document.getElementById("topPredictions");
-      probContainer.innerHTML = "";
-      data.probs.forEach(p => {
-        probContainer.innerHTML += `
-          <div>
-            <div class="flex justify-between text-slate-300 font-medium mb-1">
-              <span>${p.name}</span>
-              <span class="text-sky-400 font-bold">${p.pct}%</span>
-            </div>
-            <div class="w-full bg-slate-800 rounded-full h-1.5">
-              <div class="bg-sky-500 h-1.5 rounded-full" style="width: ${p.pct}%"></div>
-            </div>
-          </div>
-        `;
-      });
+ // Populate probabilities
+ const probContainer = document.getElementById("topPredictions");
+ probContainer.innerHTML = "";
+ data.probs.forEach(p => {
+ probContainer.innerHTML += `
+ <div>
+ <div class="flex justify-between text-slate-300 font-medium mb-1">
+ <span>${p.name}</span>
+ <span class="text-sky-400 font-bold">${p.pct}%</span>
+ </div>
+ <div class="w-full bg-slate-800 rounded-full h-1.5">
+ <div class="bg-sky-500 h-1.5 rounded-full" style="width: ${p.pct}%"></div>
+ </div>
+ </div>
+ `;
+ });
 
-      const canvas = document.getElementById("detectionCanvas");
-      const ctx = canvas.getContext("2d");
-      data.draw(ctx);
-    }
+ const canvas = document.getElementById("detectionCanvas");
+ const ctx = canvas.getContext("2d");
+ data.draw(ctx);
+ }
 
-    // Dropzone upload handling
-    const dropzone = document.getElementById("dropzone");
-    const fileInput = document.getElementById("fileInput");
+ // Dropzone upload handling
+ const dropzone = document.getElementById("dropzone");
+ const fileInput = document.getElementById("fileInput");
 
-    dropzone.addEventListener("click", () => fileInput.click());
-    dropzone.addEventListener("dragover", (e) => {
-      e.preventDefault();
-      dropzone.classList.add("border-sky-500");
-    });
-    dropzone.addEventListener("dragleave", () => dropzone.classList.remove("border-sky-500"));
-    dropzone.addEventListener("drop", (e) => {
-      e.preventDefault();
-      dropzone.classList.remove("border-sky-500");
-      if (e.dataTransfer.files.length) processUploadedFile(e.dataTransfer.files[0]);
-    });
+ dropzone.addEventListener("click", () => fileInput.click());
+ dropzone.addEventListener("dragover", (e) => {
+ e.preventDefault();
+ dropzone.classList.add("border-sky-500");
+ });
+ dropzone.addEventListener("dragleave", () => dropzone.classList.remove("border-sky-500"));
+ dropzone.addEventListener("drop", (e) => {
+ e.preventDefault();
+ dropzone.classList.remove("border-sky-500");
+ if (e.dataTransfer.files.length) processUploadedFile(e.dataTransfer.files[0]);
+ });
 
-    function handleFileUpload(e) {
-      if (e.target.files.length) processUploadedFile(e.target.files[0]);
-    }
+ function handleFileUpload(e) {
+ if (e.target.files.length) processUploadedFile(e.target.files[0]);
+ }
 
-    function processUploadedFile(file) {
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        const img = new Image();
-        img.onload = () => {
-          const canvas = document.getElementById("detectionCanvas");
-          const ctx = canvas.getContext("2d");
-          ctx.clearRect(0, 0, canvas.width, canvas.height);
-          ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+ function processUploadedFile(file) {
+ const reader = new FileReader();
+ reader.onload = (event) => {
+ const img = new Image();
+ img.onload = () => {
+ const canvas = document.getElementById("detectionCanvas");
+ const ctx = canvas.getContext("2d");
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+ ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
 
-          // Overlay bounding box
-          ctx.strokeStyle = "#38bdf8";
-          ctx.lineWidth = 2;
-          ctx.strokeRect(120, 80, 360, 260);
+ // Overlay bounding box
+ ctx.strokeStyle = "#38bdf8";
+ ctx.lineWidth = 2;
+ ctx.strokeRect(120, 80, 360, 260);
 
-          ctx.fillStyle = "#0284c7";
-          ctx.fillRect(120, 56, 210, 24);
-          ctx.fillStyle = "#ffffff";
-          ctx.font = "bold 11px monospace";
-          ctx.fillText("CLASSIFIED: AIRCRAFT DETECTED", 128, 72);
+ ctx.fillStyle = "#0284c7";
+ ctx.fillRect(120, 56, 210, 24);
+ ctx.fillStyle = "#ffffff";
+ ctx.font = "bold 11px monospace";
+ ctx.fillText("CLASSIFIED: AIRCRAFT DETECTED", 128, 72);
 
-          // Heuristic classification based on filename or dimensions
-          loadPreset(file.name.toLowerCase().includes("jet") ? "fighter" : "airliner");
-        };
-        img.src = event.target.result;
-      };
-      reader.readAsDataURL(file);
-    }
+ // Heuristic classification based on filename or dimensions
+ loadPreset(file.name.toLowerCase().includes("jet") ? "fighter" : "airliner");
+ };
+ img.src = event.target.result;
+ };
+ reader.readAsDataURL(file);
+ }
 
-    // Initial preset
-    loadPreset("fighter");
-  </script>
+ // Initial preset
+ loadPreset("fighter");
+ </script>
 </body>
 </html>
